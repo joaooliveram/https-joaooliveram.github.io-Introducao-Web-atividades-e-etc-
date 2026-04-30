@@ -34,7 +34,7 @@ body{
 }
 
 .logo{
-color: var(--cor-neon);
+color: var(--cor-link);
 font-weight: 700;
 font-size: 2.0em;
 text-decoration: none;
@@ -77,7 +77,7 @@ min-height: 100vh;
 align-items: center;
 justify-content: center;
 padding: 12% 5%;
-background: radial-gradient(circle at 75% 45%, var(--cor-neon) 0%, transparent 30%);
+background: radial-gradient(circle at 74% 51%, var(--cor-neon) 0%, transparent 30%);
 }
 
 .conteudo_pagina{
@@ -99,7 +99,7 @@ aspect-ratio: 1 / 1; /* Garante que a foto seja SEMPRE um quadrado */
 border-radius: 50%;
 object-fit: cover; 
 border: 3px solid var(--cor-link);
-box-shadow: 0 0 50px var(--cor-neon);
+box-shadow: 0 0 500px var(--cor-link);
 animation: float 3s ease-in-out infinite;
 filter: grayscale(0.2) contrast(1.1);
 }
@@ -116,7 +116,7 @@ filter: grayscale(0.2) contrast(1.1);
 .conteudo h1{
 font-size: 4em;
 margin-bottom: 1.5rem;
-background: linear-gradient(45deg, var(--cor-neon)30%, #ffffff 70%);
+background: linear-gradient(178deg, var(--cor-neon) 2%, #ffffff 80%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
@@ -138,6 +138,13 @@ text-decoration: none;
 transition: all 0.3s ease;
 position: relative;
 overflow: hidden;
+
+}
+
+.botao_contato:hover{
+transform: translateY(-10px);
+border-color: var(--cor-texto);
+box-shadow: 0 0 25px var(--cor-texto);
 }
 
 /* Skills */
@@ -160,4 +167,68 @@ background: rgba(255, 255, 255, 0.05);
 transition: all 0.3s ease;
 border: 1px solid rgba(255, 255, 255, 0.1);
 backdrop-filter: blur(5px);
+}
+
+.skill_card:hover {
+transform: translateY(-10px);
+border-color: var(--cor-neon);
+box-shadow: 0 0 30px var(--cor-link);
+}
+
+.skill_card i{
+font-size: 2.5em;
+color: var(--cor-link);
+margin-bottom: 1rem;
+}
+
+/* Footer */
+footer{
+background: var(--cor-fundo);
+padding: 3rem 5%;
+text-align: center;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.links_sociais{
+margin-top: 2rem;
+display: flex;
+justify-content: center;
+gap: 2rem;
+}
+
+.links_sociais a{
+color: var(--cor-texto);
+font-size: 2.2em;
+transition: all 0.3s ease;
+}
+
+.links_sociais a:hover{
+color: var(--cor-link);
+transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+.conteudo{
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.conteudo_pagina{
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.foto_perfil{
+    width: 280px;
+    height: 280px;
+}
+
+.nav-links{
+    display: none;
+}
+
+.logo{
+    font-size: 1.5em;
+}
 }
